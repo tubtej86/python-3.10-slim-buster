@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y git
 
 RUN git clone https://github.com/tubtej86/python-3.10-slim-buster.git .
 
-RUN run: pip install --upgrade pip.txt
+RUN pip install --upgrade pip
 
 EXPOSE 7860
 CMD ["uvicorn", "run:main_app", "--host", "0.0.0.0", "--port", "7860", "--workers", "4"]
